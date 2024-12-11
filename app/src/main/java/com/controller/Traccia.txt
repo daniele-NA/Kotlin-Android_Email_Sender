@@ -1,0 +1,31 @@
+Ogni classe ha accesso al database attraverso l'object Bridge,quest'ultimo si occupa di dare "pubblica"
+accessibilità al database e si occupa delle operazioni di scrittura e lettura in memoria
+
+
+VIEW:
+
+FRAGMENTS:
+    quest'ultimi sovrascrivono gli elementi della upper bar con le azioni che preferiscono
+    ogni frammento utilizza il binding ed estende l'interface Utils,che permette una serie di tool tra cui
+    notifiche,toast ed animazioni
+
+ACTIVITY:
+    le due attività vengono accese e spente dallo Switcher che fa partire un'altra attività
+    e termina quella corrente,quella corrente è stabilita dalla sovrascrittura di ogni Activity del metodo
+    onResume,che ad ogni partenza comunica con lo Switcher;anche qui lo scambio di dati è completamente pubblico
+
+
+CONTROLLER:
+    AccessDone->tiene traccia del primo avvio dell'app,essendo il metodo REadFromFile nel metodo onCreate()
+    quesst'ultimo viene chimato anche quando si passa alla Login e poi si ripassa al MAin,invece grazie a questo Object Statico
+    teniamo traccia e limitiamo la lettura della memoria solo a primo avvio
+
+
+MODEL:
+l'AbstractEmail condivide i parametri sia per le email con file che senza,viene estesa da SimpleEmail e StructuredEmail;
+entrambe fanno l'override del sendEmail() e delle variabili d'istanza della classe ,il tutto integrato con delle Coroutine
+che rilanciano il valore (attraverso il database e il Bridge) fino alle activity/frammenti,quest'ultimi eseguono
+queste suspend function in dei MainScope.launch{},dato che non è possibile captare eccezioni delle coroutine al di fuori
+di quest'ultime.
+
+

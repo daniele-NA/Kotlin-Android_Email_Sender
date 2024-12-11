@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".LoginActivity">
+
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Send your best Email !!"
+        android:textColor="@color/yellow"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/field_email_sender"
+        app:layout_constraintStart_toStartOf="@+id/field_email_sender"
+        app:layout_constraintTop_toBottomOf="@+id/sign"
+        app:srcCompat="@drawable/main_icon" />
+
+    <EditText
+        android:id="@+id/field_email_sender"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/style_field"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/field_password_sender"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/style_field"
+        android:hint="password APP"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/field_email_sender"
+        app:layout_constraintStart_toStartOf="@+id/field_email_sender"
+        app:layout_constraintTop_toBottomOf="@+id/field_email_sender"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/style_button"
+        android:hint="LOGIN"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_password_sender"
+        app:layout_constraintVertical_bias="0.925"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/ig_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="example"
+        tools:ignore="HardcodedText"
+        android:background="@drawable/style_field"
+        app:layout_constraintBottom_toBottomOf="@+id/ds_image"
+        app:layout_constraintEnd_toStartOf="@+id/ds_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ds_image"
+        app:srcCompat="@drawable/ig_logo"
+         />
+
+
+    <ImageButton
+        android:id="@+id/ds_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="example"
+        tools:ignore="HardcodedText"
+        android:background="@drawable/style_field"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fb_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ig_image"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:srcCompat="@drawable/ds_logo" />
+
+    <ImageButton
+        android:id="@+id/fb_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="example"
+        tools:ignore="HardcodedText"
+        android:background="@drawable/style_field"
+        app:layout_constraintBottom_toBottomOf="@+id/ds_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ds_image"
+        app:layout_constraintTop_toTopOf="@+id/ds_image"
+        app:srcCompat="@drawable/fb_logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="563dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="111dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

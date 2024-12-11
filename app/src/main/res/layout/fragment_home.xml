@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context="com.view.MainActivity"
+    tools:ignore="HardcodedText"
+
+
+    >
+
+
+    <EditText
+        android:id="@+id/field_email_recipient"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/style_field"
+        android:hint="email [destinatario]"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/field_title_sender"
+        app:layout_constraintStart_toStartOf="@+id/field_title_sender"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+         />
+
+    <EditText
+        android:id="@+id/field_title_sender"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/style_field"
+        android:hint="titolo"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/field_body_sender"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/field_body_sender"
+        app:layout_constraintTop_toBottomOf="@+id/field_email_recipient"
+         />
+
+    <EditText
+        android:id="@+id/field_body_sender"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/style_field"
+        android:gravity="top"
+
+        android:hint="corpo"
+        android:importantForAutofill="no"
+        android:inputType="text|textMultiLine"
+        android:lines="6"
+        android:overScrollMode="always"
+        android:padding="8dp"
+        android:scrollbarStyle="insideInset"
+
+
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_title_sender"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    <Button
+        android:id="@+id/btn_sending"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/style_button"
+        android:hint="INVIO"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="22sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.212"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:progressDrawable="@drawable/style_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_file" />
+
+
+    <ImageButton
+        android:id="@+id/upload_file"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="N.A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancel_file"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/upload_icon"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/cancel_file"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="N.A"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/upload_file"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@drawable/cancel_file_icon"
+        tools:ignore="HardcodedText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="405dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

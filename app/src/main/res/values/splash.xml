@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="SplashTheme" parent="Theme.SplashScreen">
+    <item name="windowSplashScreenBackground">@color/blue</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/main_icon</item>
+    <item name="windowSplashScreenAnimationDuration">1000</item>
+    <item name="postSplashScreenTheme">@style/Theme.UpperBar</item>
+
+    <!-- viene impostato prima un tema da libreria per splash,
+    successivamente cambiato con quello per la bottom bar etc etc-->
+</style>
+</resources>

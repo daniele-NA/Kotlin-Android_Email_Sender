@@ -1,0 +1,207 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:ignore="HardcodedText,TextViewEdits,LabelFor"
+
+
+    >
+
+
+    <TextView
+        android:id="@+id/none"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/style_field"
+        android:gravity="center_horizontal"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="8dp"
+        android:text="Mantieni l'accesso"
+        android:textColor="@color/yellow"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/none2"
+        app:layout_constraintEnd_toEndOf="@+id/none2"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toStartOf="@+id/none2"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="0.67" />
+
+
+    <Switch
+        android:id="@+id/switch_access"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/switch_advertising"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/none"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="0.554"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/none2"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/style_field"
+        android:gravity="center_horizontal"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="8dp"
+        android:text="Tienimi aggiornato"
+        android:textColor="@color/yellow"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/switch_advertising"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Switch
+        android:id="@+id/switch_advertising"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/none2"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/none3"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/style_field"
+        android:gravity="center_horizontal"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="8dp"
+        android:text="Nuova app password"
+        android:textColor="@color/yellow"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <EditText
+        android:id="@+id/field_new_password"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:gravity="center_horizontal"
+        android:hint=" es :  xkjl-lkmf-xxxx-oeld"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_new_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/none3" />
+
+    <Button
+        android:id="@+id/btn_new_password"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/style_button"
+        android:hint="INVIO"
+        android:padding="8dp"
+        android:text="Applica"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="@+id/field_new_password"
+        app:layout_constraintStart_toStartOf="@+id/field_new_password" />
+
+    <TextView
+        android:id="@+id/none4"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/style_field"
+        android:gravity="center_horizontal"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="8dp"
+        android:text="Concedi notifiche"
+        android:textColor="@color/yellow"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_open_archive"
+        app:layout_constraintEnd_toStartOf="@+id/switch_notification"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+
+    <Switch
+        android:id="@+id/switch_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/none4"
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:layout_constraintVertical_bias="0.171"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/btn_open_archive"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/style_button"
+        android:padding="8dp"
+        android:text="apri archivio"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="272dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="541dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="85dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
